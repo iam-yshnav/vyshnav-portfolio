@@ -11,12 +11,11 @@ const AboutSection = () => {
           <div className="md:col-span-1">
             <div className="cyber-card p-2 shadow-lg cyber-glow hover:scale-[1.02] transition-transform duration-300">
               <div className="aspect-square bg-accent/50 rounded-md overflow-hidden">
-                {/* Replace with actual image when available */}
-                <div className="w-full h-full bg-circuit-pattern flex items-center justify-center">
-                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center border border-primary/30 backdrop-blur-sm">
-                    <span className="text-6xl">VV</span>
-                  </div>
-                </div>
+                <img 
+                  src="/lovable-uploads/a9beb0a3-4515-4b80-b659-9f6ff12d5449.png" 
+                  alt="Vyshnav Vinod" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

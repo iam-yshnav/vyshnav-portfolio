@@ -41,24 +41,14 @@ const projectsData: ProjectDetails[] = [
   },
   {
     id: 3,
-    title: "SECURTEK",
-    description: "Advanced network monitoring tool with real-time threat detection and visualization dashboard.",
-    fullDescription: "SECURTEK is an enterprise-grade network monitoring solution that provides real-time threat detection and comprehensive visualization capabilities. The dashboard offers intuitive graphics to represent network traffic patterns, potential threats, and system vulnerabilities. The tool implements machine learning algorithms to predict and prevent potential security breaches based on historical data patterns.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "D3.js"],
+    title: "WordPress - The Healthy Aging Foundation",
+    description: "Custom WordPress website development for The Healthy Aging Foundation with specialized course and index pages.",
+    fullDescription: "Developed responsive and user-friendly WordPress website for The Healthy Aging Foundation, focusing on two key sections: a comprehensive course catalog page (thehafoundation.com/courses) and a specialized health index page (thehafoundation.com/haindex/). The project involved custom WordPress theme development, responsive design implementation, and content optimization for healthcare education.",
+    technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/iam-yshnav",
-    imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    demoUrl: "https://thehafoundation.com/courses",
+    imageUrl: "https://images.unsplash.com/photo-1481487196290-c152efe083f5",
     category: "cybersecurity"
-  },
-  {
-    id: 4,
-    title: "DEVPORTAL",
-    description: "Developer ecosystem for sharing code snippets, tutorials, and project resources with community feedback.",
-    fullDescription: "DEVPORTAL is a comprehensive ecosystem designed for developers to share knowledge, code snippets, and project resources. The platform supports community feedback systems, tutorial creation tools, and version control integration. Users can create personalized learning paths, contribute to open-source initiatives, and track their skill development through interactive challenges.",
-    technologies: ["React", "Firebase", "GraphQL", "TypeScript"],
-    githubUrl: "https://github.com/iam-yshnav",
-    demoUrl: "https://github.com/iam-yshnav",
-    imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    category: "development"
   }
 ];
 

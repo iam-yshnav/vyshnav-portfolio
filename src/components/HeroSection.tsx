@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {
@@ -31,7 +31,7 @@ const HeroSection = () => {
             </span>
           </h1>
           
-          <h2 className="text-2xl md:text-3xl font-medium text-muted mb-6 typing-animation">
+          <h2 className="text-2xl md:text-3xl font-medium text-muted mb-6 typing-text">
             Cybersecurity Student & Developer
           </h2>
           
@@ -55,7 +55,7 @@ const HeroSection = () => {
             
             <div className="flex space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/iam-yshnav" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="cyber-card p-3 hover:scale-110 transition-transform"
@@ -63,7 +63,7 @@ const HeroSection = () => {
                 <Github className="h-5 w-5 text-primary" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/yshnav/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="cyber-card p-3 hover:scale-110 transition-transform"
@@ -71,12 +71,12 @@ const HeroSection = () => {
                 <Linkedin className="h-5 w-5 text-primary" />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://www.instagram.com/iam_yshnav_" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="cyber-card p-3 hover:scale-110 transition-transform"
               >
-                <Twitter className="h-5 w-5 text-primary" />
+                <Instagram className="h-5 w-5 text-primary" />
               </a>
             </div>
           </div>

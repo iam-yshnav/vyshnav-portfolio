@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 const FooterSection = () => {
   const currentYear = new Date().getFullYear();
@@ -22,7 +22,7 @@ const FooterSection = () => {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/iam-yshnav" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="cyber-card p-2 hover:scale-110 transition-transform"
@@ -30,7 +30,7 @@ const FooterSection = () => {
                 <Github className="h-4 w-4 text-primary" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/yshnav/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="cyber-card p-2 hover:scale-110 transition-transform"
@@ -38,12 +38,12 @@ const FooterSection = () => {
                 <Linkedin className="h-4 w-4 text-primary" />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://www.instagram.com/iam_yshnav_" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="cyber-card p-2 hover:scale-110 transition-transform"
               >
-                <Twitter className="h-4 w-4 text-primary" />
+                <Instagram className="h-4 w-4 text-primary" />
               </a>
             </div>
             

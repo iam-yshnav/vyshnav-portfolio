@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -73,9 +74,9 @@ const ProjectsSection = () => {
         
         <div className="mt-12 text-center">
           <Button asChild className="btn-cyber">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <Link to="/projects">
               View More Projects
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

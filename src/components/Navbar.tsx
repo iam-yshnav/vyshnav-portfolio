@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Menu, X, Github, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, Github, Linkedin, Instagram } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,14 +76,14 @@ const Navbar = () => {
                     </a>
                   ))}
                   <div className="flex justify-center space-x-4 pt-4">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                    <a href="https://github.com/iam-yshnav" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
                       <Github size={20} />
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                    <a href="https://www.linkedin.com/in/yshnav/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
                       <Linkedin size={20} />
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
-                      <Twitter size={20} />
+                    <a href="https://www.instagram.com/iam_yshnav_" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                      <Instagram size={20} />
                     </a>
                   </div>
                 </nav>
@@ -107,14 +107,14 @@ const Navbar = () => {
             </NavigationMenu>
 
             <div className="flex space-x-3">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+              <a href="https://github.com/iam-yshnav" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/yshnav/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
-                <Twitter size={20} />
+              <a href="https://www.instagram.com/iam_yshnav_" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                <Instagram size={20} />
               </a>
             </div>
           </div>

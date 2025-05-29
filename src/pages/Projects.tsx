@@ -43,12 +43,23 @@ const projectsData: ProjectDetails[] = [
     id: 3,
     title: "WordPress - The Healthy Aging Foundation",
     description: "Custom WordPress website development for The Healthy Aging Foundation with specialized course and index pages.",
-    fullDescription: "Developed responsive and user-friendly WordPress website for The Healthy Aging Foundation, focusing on two key sections: a comprehensive course catalog page (thehafoundation.com/courses) and a specialized health index page (thehafoundation.com/haindex/). The project involved custom WordPress theme development, responsive design implementation, and content optimization for healthcare education.",
+    fullDescription: "Developed responsive and user-friendly WordPress website for The Healthy Aging Foundation, focusing on comprehensive health education platform. The project involved custom WordPress theme development, responsive design implementation, and content optimization for healthcare education. Includes ambassador portal and course management systems.",
     technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/iam-yshnav",
-    demoUrl: "https://thehafoundation.com/courses",
+    demoUrl: "https://thehafoundation.com/haambassador",
     imageUrl: "https://images.unsplash.com/photo-1481487196290-c152efe083f5",
-    category: "cybersecurity"
+    category: "development"
+  },
+  {
+    id: 4,
+    title: "HA Foundation - Courses Portal",
+    description: "Design and implementation of comprehensive courses portal for health education and training programs.",
+    fullDescription: "Created a dedicated courses portal for The Healthy Aging Foundation featuring course catalog, enrollment systems, and educational content management. The portal includes user-friendly navigation, course filtering, and responsive design optimized for both desktop and mobile users. Implemented custom post types and advanced content management features.",
+    technologies: ["WordPress", "PHP", "CSS", "JavaScript", "MySQL"],
+    githubUrl: "https://github.com/iam-yshnav",
+    demoUrl: "https://thehafoundation.com/courses",
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+    category: "development"
   }
 ];
 

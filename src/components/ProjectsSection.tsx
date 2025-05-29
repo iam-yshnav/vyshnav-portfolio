@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface Project {
@@ -10,6 +10,7 @@ interface Project {
   description: string;
   technologies: string[];
   githubUrl: string;
+  liveUrl?: string;
   imageUrl?: string;
 }
 
@@ -34,6 +35,15 @@ const projects: Project[] = [
     description: "Custom WordPress website development for The Healthy Aging Foundation with specialized course and index pages.",
     technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/iam-yshnav",
+    liveUrl: "https://thehafoundation.com/haambassador",
+  },
+  {
+    id: 4,
+    title: "HA Foundation - Courses Portal",
+    description: "Design and implementation of comprehensive courses portal for health education and training programs.",
+    technologies: ["WordPress", "PHP", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/iam-yshnav",
+    liveUrl: "https://thehafoundation.com/courses",
   },
 ];
 
@@ -43,14 +53,14 @@ const ProjectsSection = () => {
       <div className="container">
         <h2 className="section-title">Projects</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-12">
           {projects.map((project) => (
             <Card key={project.id} className="cyber-card overflow-hidden hover:shadow-primary/10 hover:-translate-y-1 transition-all">
               <div className="h-48 bg-circuit-pattern flex items-center justify-center">
-                <h3 className="text-2xl font-bold text-primary text-center px-4">{project.title}</h3>
+                <h3 className="text-xl font-bold text-primary text-center px-4">{project.title}</h3>
               </div>
               
-              <CardHeader>
+              <CardHeader className="pb-3">
                 <CardTitle className="text-lg">{project.title}</CardTitle>
                 <CardDescription>
                   <div className="flex flex-wrap gap-2 mt-2">
@@ -63,17 +73,26 @@ const ProjectsSection = () => {
                 </CardDescription>
               </CardHeader>
               
-              <CardContent>
+              <CardContent className="pb-3">
                 <p className="text-muted-foreground text-sm">{project.description}</p>
               </CardContent>
               
-              <CardFooter>
+              <CardFooter className="flex flex-col gap-2">
                 <Button asChild variant="outline" className="cyber-border w-full">
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <Github className="h-4 w-4" />
                     View on GitHub
                   </a>
                 </Button>
+                
+                {project.liveUrl && (
+                  <Button asChild className="cyber-border w-full">
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      <ExternalLink className="h-4 w-4" />
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}

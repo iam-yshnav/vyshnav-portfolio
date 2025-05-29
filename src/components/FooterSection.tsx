@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
 
 const FooterSection = () => {
   const currentYear = new Date().getFullYear();
@@ -36,6 +36,14 @@ const FooterSection = () => {
                 className="cyber-card p-2 hover:scale-110 transition-transform"
               >
                 <Linkedin className="h-4 w-4 text-primary" />
+              </a>
+              <a 
+                href="https://twitter.com/iam_yshnav" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="cyber-card p-2 hover:scale-110 transition-transform"
+              >
+                <Twitter className="h-4 w-4 text-primary" />
               </a>
               <a 
                 href="https://www.instagram.com/iam_yshnav_" 

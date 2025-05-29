@@ -19,14 +19,21 @@ const projects: Project[] = [
     title: "INNOVX",
     description: "Platform for student-faculty project exchange, enabling collaboration and resource sharing across departments.",
     technologies: ["HTML", "CSS", "Node.js", "MongoDB"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/iam-yshnav",
   },
   {
     id: 2,
     title: "SENTINEL",
     description: "Collaborative cyber defense platform with gamified token system for training security professionals.",
     technologies: ["Python", "Flask", "HTML", "CSS", "SQLite"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/iam-yshnav",
+  },
+  {
+    id: 3,
+    title: "WordPress - The Healthy Aging Foundation",
+    description: "Custom WordPress website development for The Healthy Aging Foundation with specialized course and index pages.",
+    technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/iam-yshnav",
   },
 ];
 
@@ -36,15 +43,15 @@ const ProjectsSection = () => {
       <div className="container">
         <h2 className="section-title">Projects</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {projects.map((project) => (
             <Card key={project.id} className="cyber-card overflow-hidden hover:shadow-primary/10 hover:-translate-y-1 transition-all">
               <div className="h-48 bg-circuit-pattern flex items-center justify-center">
-                <h3 className="text-4xl font-bold text-primary">{project.title}</h3>
+                <h3 className="text-2xl font-bold text-primary text-center px-4">{project.title}</h3>
               </div>
               
               <CardHeader>
-                <CardTitle className="text-xl">{project.title}</CardTitle>
+                <CardTitle className="text-lg">{project.title}</CardTitle>
                 <CardDescription>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {project.technologies.map((tech) => (
@@ -57,11 +64,11 @@ const ProjectsSection = () => {
               </CardHeader>
               
               <CardContent>
-                <p className="text-muted-foreground">{project.description}</p>
+                <p className="text-muted-foreground text-sm">{project.description}</p>
               </CardContent>
               
               <CardFooter>
-                <Button asChild variant="outline" className="cyber-border">
+                <Button asChild variant="outline" className="cyber-border w-full">
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <Github className="h-4 w-4" />
                     View on GitHub

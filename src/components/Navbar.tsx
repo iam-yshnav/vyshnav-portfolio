@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Menu, X, Github, Linkedin, Instagram } from "lucide-react";
+import { Menu, X, Github, Linkedin, Instagram, Twitter } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -82,6 +82,9 @@ const Navbar = () => {
                     <a href="https://www.linkedin.com/in/yshnav/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
                       <Linkedin size={20} />
                     </a>
+                    <a href="https://twitter.com/iam_yshnav" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                      <Twitter size={20} />
+                    </a>
                     <a href="https://www.instagram.com/iam_yshnav_" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
                       <Instagram size={20} />
                     </a>
@@ -112,6 +115,9 @@ const Navbar = () => {
               </a>
               <a href="https://www.linkedin.com/in/yshnav/" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
                 <Linkedin size={20} />
+              </a>
+              <a href="https://twitter.com/iam_yshnav" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                <Twitter size={20} />
               </a>
               <a href="https://www.instagram.com/iam_yshnav_" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
                 <Instagram size={20} />

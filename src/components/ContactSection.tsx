@@ -6,7 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
-import { Github, Linkedin, Mail, Phone, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Instagram } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -29,21 +30,40 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+    // EmailJS configuration
+    const serviceId = 'service_uc94usp';
+    const templateId = 'template_raj7ssd';
+    const publicKey = 'nU1ilynGTfHV2sARU';
+    
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+    
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then(() => {
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+        });
+        
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        toast({
+          title: "Error sending message",
+          description: "Please try again or contact me directly via email.",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-      
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-      
-      setIsSubmitting(false);
-    }, 1500);
   };
   
   return (
@@ -63,16 +83,6 @@ const ContactSection = () => {
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="cyber-card p-3 text-primary">
-                      <Phone className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">Phone</p>
-                      <p className="font-medium">+91 8590213931</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <div className="cyber-card p-3 text-primary">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
@@ -85,7 +95,7 @@ const ContactSection = () => {
                     <p className="text-sm text-muted-foreground mb-4">Connect with me on</p>
                     <div className="flex gap-4">
                       <a 
-                        href="https://github.com" 
+                        href="https://github.com/iam-yshnav" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="cyber-card p-3 hover:scale-110 transition-transform"
@@ -93,7 +103,7 @@ const ContactSection = () => {
                         <Github className="h-5 w-5 text-primary" />
                       </a>
                       <a 
-                        href="https://linkedin.com" 
+                        href="https://www.linkedin.com/in/yshnav/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="cyber-card p-3 hover:scale-110 transition-transform"
@@ -101,12 +111,20 @@ const ContactSection = () => {
                         <Linkedin className="h-5 w-5 text-primary" />
                       </a>
                       <a 
-                        href="https://twitter.com" 
+                        href="https://twitter.com/iam_yshnav" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="cyber-card p-3 hover:scale-110 transition-transform"
                       >
                         <Twitter className="h-5 w-5 text-primary" />
+                      </a>
+                      <a 
+                        href="https://www.instagram.com/iam_yshnav_" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="cyber-card p-3 hover:scale-110 transition-transform"
+                      >
+                        <Instagram className="h-5 w-5 text-primary" />
                       </a>
                     </div>
                   </div>

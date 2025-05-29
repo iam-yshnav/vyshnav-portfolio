@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const HeroSection = () => {
@@ -41,9 +41,6 @@ const HeroSection = () => {
           
           <div className="flex flex-wrap gap-4 mb-8">
             <div className="cyber-card p-3 flex items-center gap-2">
-              <span className="text-primary">+91 8590213931</span>
-            </div>
-            <div className="cyber-card p-3 flex items-center gap-2">
               <span className="text-primary">vyshnav.vnod@gmail.com</span>
             </div>
           </div>
@@ -69,6 +66,14 @@ const HeroSection = () => {
                 className="cyber-card p-3 hover:scale-110 transition-transform"
               >
                 <Linkedin className="h-5 w-5 text-primary" />
+              </a>
+              <a 
+                href="https://twitter.com/iam_yshnav" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="cyber-card p-3 hover:scale-110 transition-transform"
+              >
+                <Twitter className="h-5 w-5 text-primary" />
               </a>
               <a 
                 href="https://www.instagram.com/iam_yshnav_" 

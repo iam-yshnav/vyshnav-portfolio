@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface Project {
@@ -9,7 +9,7 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   imageUrl?: string;
 }
@@ -34,16 +34,14 @@ const projects: Project[] = [
     title: "WordPress - The Healthy Aging Foundation",
     description: "Custom WordPress website development for The Healthy Aging Foundation with specialized course and index pages.",
     technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/iam-yshnav",
     liveUrl: "https://thehafoundation.com/haambassador",
   },
   {
     id: 4,
-    title: "HA Foundation - Courses Portal",
-    description: "Design and implementation of comprehensive courses portal for health education and training programs.",
+    title: "HA Foundation - Ambassador Portal",
+    description: "Design and implementation of ambassador portal for health education and community engagement programs.",
     technologies: ["WordPress", "PHP", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/iam-yshnav",
-    liveUrl: "https://thehafoundation.com/courses",
+    liveUrl: "https://thehafoundation.com/haambassador",
   },
 ];
 
@@ -78,12 +76,14 @@ const ProjectsSection = () => {
               </CardContent>
               
               <CardFooter className="flex flex-col gap-2">
-                <Button asChild variant="outline" className="cyber-border w-full">
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    <Github className="h-4 w-4" />
-                    View on GitHub
-                  </a>
-                </Button>
+                {project.githubUrl && (
+                  <Button asChild variant="outline" className="cyber-border w-full">
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      <ExternalLink className="h-4 w-4" />
+                      View on GitHub
+                    </a>
+                  </Button>
+                )}
                 
                 {project.liveUrl && (
                   <Button asChild className="cyber-border w-full">

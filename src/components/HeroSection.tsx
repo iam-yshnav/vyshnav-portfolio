@@ -32,7 +32,7 @@ const HeroSection = () => {
           </h1>
           
           <h2 className="text-2xl md:text-3xl font-medium text-muted mb-6 typing-text">
-            Cybersecurity Student & Developer
+            Cybersecurity Enthusiast
           </h2>
           
           <p className="text-xl mb-8 max-w-2xl text-muted-foreground">

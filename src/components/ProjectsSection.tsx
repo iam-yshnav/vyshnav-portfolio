@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
@@ -36,13 +37,6 @@ const projects: Project[] = [
     technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
     liveUrl: "https://thehafoundation.com/haambassador",
   },
-  {
-    id: 4,
-    title: "HA Foundation - Ambassador Portal",
-    description: "Design and implementation of ambassador portal for health education and community engagement programs.",
-    technologies: ["WordPress", "PHP", "CSS", "JavaScript"],
-    liveUrl: "https://thehafoundation.com/haambassador",
-  },
 ];
 
 const ProjectsSection = () => {
@@ -51,7 +45,7 @@ const ProjectsSection = () => {
       <div className="container">
         <h2 className="section-title">Projects</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {projects.map((project) => (
             <Card key={project.id} className="cyber-card overflow-hidden hover:shadow-primary/10 hover:-translate-y-1 transition-all">
               <div className="h-48 bg-circuit-pattern flex items-center justify-center">
@@ -111,3 +105,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+
